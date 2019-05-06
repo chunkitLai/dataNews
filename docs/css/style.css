@@ -1,0 +1,24 @@
+* {
+    margin: 0px;
+    padding: 0px
+}
+.bg {
+    background-image: url(../img/background.jpg);
+    background-size: 100%;
+    background-attachment: fixed
+}
+.ab {
+    font-size: 30px;
+    line-height: 200%;
+    color: white;
+    text-align: center
+}
+.h1 {
+    font-size: 20px;
+    text-align: center;
+    line-height: 200%
+}
+.t {
+    text-indent: 2em;
+    line-height: 200%
+}
