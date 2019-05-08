@@ -13,7 +13,7 @@
 
 <body>
     <!-- 正文头部 -->
-    <div style="height: 500px; text-align: center;">
+    <div style="height: 600px; text-align: center;">
         <div style="padding-top: 100px;">
             <img src="img/title.png" alt="" srcset="" width="600px">
         </div>
@@ -392,9 +392,6 @@
                 var option2 = {
                     visualMap: {
                         max: 1000,
-                        inRange: {
-                            color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026']
-                        },
                         left: 'right'
                     },
                     grid3D: {
@@ -794,7 +791,66 @@
                 </script>
             </div>
         </div>
-    </div>
+        <!-- 词频图 -->
+        <div id="chart6" style="padding-left: 20%; padding-right: 20%; height: 400px;">
+            <script style="text/javascript">
+                var chart6 = echarts.init(document.getElementById('chart6'), 'vintage');
+                var option6 = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
+                        },
+                        formatter: function (params) {
+                            var tar = params[1];
+                            return tar.name + '<br/>' + tar.seriesName + ':' + tar.value;
+                        }
+                    },
+                    xAxis: {
+                        type: 'category',
+                        splitLine: { default: true },
+                        data: ['民生', '百姓', '精准扶贫', '农业', '民心', '全面深化改革', '全面建成小康社会', '一带一路', '脱贫攻坚'],//x轴中的数据
+                        axisLabel: {
+                            interval: 0,
+                            rotate: "45"
+                        }
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [
+                        {
+                            name: '辅助',
+                            type: 'bar',
+                            stack: '总量',
+                            itemStyle: {
+                                normal: {
+                                    barBorderColor: 'rgba(0,0,0,0)',
+                                    color: 'rgba(0,0,0,0)'
+                                },
+                                emphasis: {
+                                    barBorderColor: 'rgba(0,0,0,0)',
+                                    color: 'rgba(0,0,0,0)'
+                                }
+                            },
+                            data: [6564, 6031, 5750, 4529, 3886, 2921, 1838, 321, 0]
+                        }, {
+                            name: '词频',
+                            type: 'bar',
+                            stack: '总量',
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'inside'
+                                }
+                            },
+                            data: [1601, 533, 200, 1221, 643, 965, 1083, 1517, 321]
+                        }
+                    ]
+                };
+                chart6.setOption(option6)
+            </script>
+        </div>
     </div>
 </body>
 
