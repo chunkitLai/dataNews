@@ -1,6 +1,7 @@
 body {
     background-image: url(../img/background.jpg);
     background-size: 100%;
+    background-color: rgba(254,248,239,1);
     background-attachment: fixed;
 }
 div {
@@ -8,8 +9,14 @@ div {
     padding: 0px;
 }
 div.text {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+div.chart{
     padding-left: 20%;
     padding-right: 20%;
+    padding-bottom: 1%;
+    height: 350px;
 }
 p.a {
     font-size: 30px;
@@ -22,4 +29,13 @@ p.h1 {
 p.text {
     text-indent: 2em;
     line-height: 200%;
+}
+p.note {
+    text-align: center;
+    color: gray;
+    font-size: 5px;
+}
+button {
+    background-color: rgba(254,248,239,1);
+    border-color: rgba(254,248,239,1);
 }
