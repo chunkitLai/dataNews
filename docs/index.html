@@ -9,11 +9,34 @@
     <script src="js/echarts-wordcloud.js"></script>
     <script src="js/echarts 4.2.1/theme/vintage.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+        var isMobile = {
+            Android: function () {
+                return navigator.userAgent.match(/Android/i) ? true : false;
+            },
+            BlackBerry: function () {
+                return navigator.userAgent.match(/BlackBerry/i) ? true : false;
+            },
+            iOS: function () {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+            },
+            Windows: function () {
+                return navigator.userAgent.match(/IEMobile/i) ? true : false;
+            },
+            any: function () {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+            }
+        };
+        if (isMobile.any()) {
+            alert('请使用pc端打开获得更佳的视觉体验！');
+        }
+
+    </script>
 </head>
 
 <body>
     <!-- 正文头部 -->
-    <div style="height: 600px; text-align: center;">
+    <div id="head" style="height: 600px; text-align: center;">
         <div style="padding-top: 100px;">
             <img src="img/title.png" alt="" srcset="" width="600px">
         </div>
@@ -22,7 +45,7 @@
         </div>
     </div>
     <!-- 正文主体 -->
-    <div style="background-color: rgba(254,248,239,1); padding-top: 100px; padding-bottom: 100px;">
+    <div id="body" style="background-color: rgba(254,248,239,1); padding-top: 100px; padding-bottom: 100px;">
         <div class="text">
             <p class="text">
                 我国幅员辽阔。北起漠河南到曾母暗沙，西边是帕米尔高原，东至黑龙江、乌苏里江汇合处。随着大开发战略的步伐，西北地区光芒日盛，成为愈发难以忽视的存在。不过在小康成为常态的今天，恐怕少有人能切实体会到底层这群人生活，它绝非理想的状态。我们从西北地区省政府来信作为观察的切入口，“哀民生之多艰”——他们构成的是西北部画卷上的粗粝图腾。
@@ -993,8 +1016,10 @@
         </div>
     </div>
     <div style="background-color: rgba(254,248,239,1); padding-top: 100px; padding-bottom: 10px;"">
-        <p style="font-size:10px; text-align: center; color: rgba(194, 193, 189,1); line-height: 200%;">策划&制作：<br>张紫然、刘逸琳、汪浩博、黎俊杰</p>
-        <p style="font-size:10px; text-align: center; color: rgba(194, 193, 189,1); line-height: 200%;">数据来源：<br>人民网、中国政府网</p>
+        <p style=" font-size:10px; text-align: center; color: rgba(194, 193, 189,1); line-height: 200%;">
+        策划&制作：<br>张紫然、刘逸琳、汪浩博、黎俊杰</p>
+        <p style="font-size:10px; text-align: center; color: rgba(194, 193, 189,1); line-height: 200%;">
+            数据来源：<br>人民网、中国政府网</p>
     </div>
 </body>
 
