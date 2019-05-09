@@ -27,6 +27,7 @@ div.chart_se{
     text-align: center;
 }
 p.a {
+    text-align: center;
     font-size: 30px;
     color: white;
 }
@@ -39,6 +40,8 @@ p.h1 {
 p.text {
     text-indent: 2em;
     line-height: 200%;
+    text-align: justify;
+    text-justify: inter-character;
 }
 p.note {
     text-align: center;
