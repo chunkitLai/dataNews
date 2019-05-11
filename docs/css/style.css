@@ -46,7 +46,7 @@ p.text {
 p.note {
     text-align: center;
     color: gray;
-    font-size: 5px;
+    font-size: 15px;
 }
 button {
     background-color: rgba(254,248,239,1);
